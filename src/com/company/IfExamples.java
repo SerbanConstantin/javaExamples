@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class IfExamples {
     public static void main(String[] args) {
-        leapOrRegularYear();
-        intervalNum();
-        chocolateIf();
-        triangleIf();
-        pozOrNegNum();
+//        leapOrRegularYear();
+//        intervalNum();
+//        chocolateIf();
+//        triangleIf();
+//        pozOrNegNum();
         evenOrOddNum();
 
     }

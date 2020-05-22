@@ -12,7 +12,9 @@ public class WhileExamples {
         //findLargestNum();
         //sumFirstNumbers();
         //sumElements();
-        collatzConjecture();
+        //collatzConjecture();
+        //profit();
+
     }
 
     private static void printLetters() {
@@ -147,16 +149,34 @@ public class WhileExamples {
         while (n != 1) {
             if (n % 2 == 0) {
                 n = n / 2;
-
             } else {
-
                 n = (n * 3) + 1;
-
             }
             System.out.print(n + " ");
-
         }
+    }
 
+    private static void profit() {
+
+        /*Ann put M money in the bank. The bank increases Ann's deposit by P percent every year.
+        Ann wants to know how many years should pass until her deposit in the bank reaches K money.
+        Can you help her to answer this question?
+        Input contains three integers - M, P, K. It is guaranteed that all numbers are positive and K ≥ M.
+          Output the answer to Ann's question.*/
+
+        Scanner scanner = new Scanner(System.in);
+
+        double moneyM = scanner.nextDouble();
+        double percentP = scanner.nextDouble();
+        double depositK = scanner.nextDouble();
+
+        int years = 0;
+        while (depositK > moneyM) {
+            moneyM = moneyM * percentP / 100 + moneyM;
+            years++;
+        }
+        System.out.println(years);
 
     }
+
 }

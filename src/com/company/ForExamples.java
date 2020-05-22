@@ -9,18 +9,20 @@ public class ForExamples {
 
     public static void main(String[] args) {
 
-        avgNumbers();
-        maxNumDiv();
-        grades();
-        multiTable();
-        sumInteger();
-        outputArray();
-        productNumber();
-        sumOfInts();
-        numDivBy();
-        fizzBuzz();
-        detectorParts();
-        countNumDivBy();
+//        avgNumbers();
+//        maxNumDiv();
+//        grades();
+//        multiTable();
+//        sumInteger();
+//        outputArray();
+//        productNumber();
+//        sumOfInts();
+//        numDivBy();
+//        fizzBuzz();
+//        detectorParts();
+//        countNumDivBy();
+//        printLadderOfNumbers();
+        breakEx();
 
 
     }
@@ -286,11 +288,46 @@ public class ForExamples {
         int count = 0;
 
         for (int i = a; i <= b; i++) {
-                if (i % n == 0) {
-                    count++;
+            if (i % n == 0) {
+                count++;
+            }
+        }
+        System.out.println(count);
+
+    }
+
+    private static void printLadderOfNumbers() {
+
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                System.out.print(j + " ");
+                if (i == j) {
+                    break;
                 }
             }
-        System.out.println(count);
+            System.out.println();
+        }
+
+    }
+    private static void breakEx() {
+        final int numberOfElements = 1000;
+        Scanner scanner = new Scanner(System.in);
+
+        int[] array = new int[numberOfElements];
+        for (int i = 0; i < numberOfElements; i++) {
+            array[i] = scanner.nextInt();
+
+            if (array[i] == 0) {
+                break;
+            }
+            if (array[i] % 2 == 0) {
+                System.out.println("even");
+            } else {
+                System.out.println("odd");
+            }
+
+
+        }
 
     }
 
