@@ -117,21 +117,6 @@ public class WhileExamples {
         /*Find the sum of all elements of a sequence, ending with the number 0.
         The number 0 itself is not included into the sequence and serves as a sign of cessation.*/
 
-//        int n,sum=0,i=0;
-//        Scanner sc=new Scanner(System.in);
-//        System.out.println("Enter how many numbers you want sum");
-//        n=sc.nextInt();
-//        int a[]=new int[n];
-//        System.out.println("Enter the "+n+" numbers ");
-//        while(i<n)
-//        {
-//            System.out.println("Enter  number  "+(i+1)+":");
-//            a[i]=sc.nextInt();
-//            sum+=a[i];
-//            i++;
-//        }
-//        System.out.println("sum is ="+sum);
-
 
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
