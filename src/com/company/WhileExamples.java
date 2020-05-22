@@ -144,7 +144,6 @@ public class WhileExamples {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         System.out.print(n + " ");
-        int i = 0;
         while (n != 1) {
             if (n % 2 == 0) {
                 n = n / 2;
@@ -157,7 +156,6 @@ public class WhileExamples {
             }
 
         }
-       // System.out.print(i);
 
     }
 }
