@@ -1,16 +1,21 @@
 package com.company;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class StringExamples {
 
     public static void main(String[] args) {
-        replaceLetters();
-        substringEx();
-        compareString();
-        prefixEx();
-        endsEx();
-        encrypted();
+//        replaceLetters();
+//        substringEx();
+//        compareString();
+//        prefixEx();
+//        endsEx();
+//        encrypted();
+        //stringToArray();
+        //forString();
+        //forEachString();
+        ex();
     }
 
     private static void replaceLetters() {
@@ -91,5 +96,64 @@ public class StringExamples {
 
     }
 
+    private static void stringToArray() {
+
+        String text = "Hello";
+        String[] parts = text.split(""); // {"H", "e", "l", "l", "o"}
+        System.out.println(Arrays.toString(parts));
+
+        String sentence = "a long text";
+        String[] words = sentence.split(" "); // {"a", "long", "text"}
+        System.out.println(Arrays.toString(words));
+
+        String number = "+1-213-345-6789";
+        String[] numberParts = number.split("-"); // {"+1", "213", "345", "6789"}
+        System.out.println(Arrays.toString(numberParts));
+
+        String txt = "That's one small step for a man, one giant leap for mankind.";
+        String[] txtParts = text.split(","); // {"That's one small step for a man", " one giant leap for mankind."}
+        System.out.println(Arrays.toString(txtParts));
+
+        String string = "I'm gonna be a programmer";
+        String[] strings = text.split(" gonna be "); // {"I'm", "a programmer"}
+        System.out.println(Arrays.toString(strings));
+    }
+
+    private static void forString() {
+
+        String scientistName = "Isaac Newton";
+
+        for (int i = 0; i < scientistName.length(); i++) {
+            System.out.print(scientistName.charAt(i) + " "); // print the current character
+        }
+
+    }
+
+    private static void forEachString() {
+
+        String str = "strings are not primitive types!";
+
+        int count = 0;
+        for (char ch : str.toCharArray()) {
+            if (Character.isWhitespace(ch)) {
+                count++;
+            }
+        }
+
+        System.out.println(count); // 4
+    }
+
+    private static void ex() {
+        Scanner scanner = new Scanner(System.in);
+        String string = scanner.nextLine();
+
+        String[] words = string.split(" ");
+        System.out.println(Arrays.toString(words));
+
+        for (String word : words) {
+
+        }
+
+    }
 
 }

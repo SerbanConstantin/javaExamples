@@ -22,7 +22,9 @@ public class ForExamples {
 //        detectorParts();
 //        countNumDivBy();
 //        printLadderOfNumbers();
-        breakEx();
+        //breakEx();
+        //theSequence();
+        unOrderedSequence();
 
 
     }
@@ -309,6 +311,7 @@ public class ForExamples {
         }
 
     }
+
     private static void breakEx() {
 
         /*Given a sequence of natural numbers. For each number of the sequence output "even" if the number is even, otherwise, "odd".
@@ -334,10 +337,59 @@ public class ForExamples {
             } else {
                 System.out.println("odd");
             }
-
-
         }
 
+    }
+
+    public static void theSequence() {
+
+       /* Write a program that prints a part of the sequence 1 2 2 3 3 3 4 4 4 4 5 5 5 5 5 ...
+       (the number is repeated as many times, to what it equals to).
+       The input to the program is a positive integer n: the number of the elements of the sequence the program should print.
+        Output the sequence of numbers, written in a single line, space-separated.
+                For example, if n = 7, then the program should output 1 2 2 3 3 3 4.*/
+
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+        int count = number;
+
+        for (int i = 1; i <= number; i++) {
+            for (int j = i; j > 0; j--) {
+                System.out.print(i + " ");
+                count--;
+                if (count == 0) {
+                    break;
+                }
+            }
+            if (count == 0) {
+                break;
+            }
+        }
+    }
+
+    private static void unOrderedSequence() {
+        Scanner s = new Scanner(System.in);
+        int a = 0;
+        while (s.hasNextInt()) {
+            int i = s.nextInt();
+            a = i;
+            if (i < a) {
+                if (i < a) {
+                    System.out.println("true");
+                } else if (i > a) {
+                    System.out.println("false");
+                    break;
+                }
+            } else if (i > a) {
+                if (i > a) {
+                    System.out.println("true");
+                } else if (i < a) {
+                    System.out.println("false");
+                    break;
+                }
+            } else if (i == a) {
+            }
+        }
     }
 
 }
